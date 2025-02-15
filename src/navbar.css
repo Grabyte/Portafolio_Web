@@ -1,0 +1,160 @@
+/*===== GOOGLE FONTS =====*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+
+/*===== VARIABLES CSS =====*/
+:root {
+  --header-height: 3rem;
+  
+  /*===== Colores =====*/
+  --first-color: #3664F4;
+  --dark-color: #070D1F;
+  --dark-color-alt: #282B3A;
+  --white-color: #E6E7E9;
+
+  /*===== Fuente y tipografia =====*/
+  --body-font: 'Poppins', sans-serif;
+  --normal-font-size: .938rem;
+  --small-font-size: .813rem;
+
+  /*===== z index =====*/
+  --z-fixed: 100;
+}
+
+body {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.bd-flex {
+  max-width: 1400px;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+  display: flex;
+  flex-wrap: nowrap; /* Evita el envolvimiento de los elementos */
+  justify-content: space-between;
+}
+
+/*===== HEADER =====*/
+.header {
+  width: 100%;
+  height: var(--header-height);
+  padding: 0 1.5rem;
+  background-color: var(--dark-color);
+  z-index: var(--z-fixed);
+  display: flex;
+  align-items: center;
+}
+
+.header__logo {
+  color: var(--white-color);
+}
+
+/*===== NAV =====*/
+.show {
+  left: 0;
+}
+
+.active {
+  background-color: var(--first-color);
+  color: var(--white-color);
+}
+
+.header {
+  height: calc(var(--header-height) + 1rem);
+}
+
+.header__logo, .header__toggle {
+  display: none;
+}
+
+.nav {
+  width: 100%;
+}
+.nav__close {
+  display: none;
+}
+
+.nav__perfil {
+  flex: 0 0 50%; /* Esto asegura que .nav__perfil ocupe el 50% del ancho */
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+.nav__img img {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  overflow: hidden;
+  object-fit: cover;
+}
+
+.nav__name {
+  margin-left: 0.8rem;
+  color: var(--white-color);
+}
+
+.nav__profesion {
+  font-size: var(--small-font-size);
+}
+
+.nav__menu {
+  display: flex;
+  align-items: center;
+}
+
+.nav__list {
+  display: flex;
+}
+
+.nav__item {
+  margin: 0 .25rem;
+}
+
+.nav__link {
+  padding: .5rem .8rem;
+  border-radius: .25rem;
+  color: var(--white-color);
+}
+
+.nav__link:hover {
+  background-color: var(--first-color);
+}
+
+.nav__social {
+  padding-top: .5rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.nav__social-icon {
+  font-size: 1.2rem;
+  color: var(--white-color);
+  margin-right: 1rem;
+}
+
+.nav__social-icon:hover {
+  color: var(--first-color);
+}
+
+/*===== MEDIA QUERIES =====*/
+@media screen and (min-width: 768px) {
+}
