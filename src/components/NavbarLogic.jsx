@@ -12,7 +12,6 @@ function NavbarLogic() {
           // Si no la tiene, eliminar la clase active de todos los links
           navLinks.forEach(link => link.classList.remove('active'));
           
-          // Añadir la clase active al enlace clickeado
           event.target.classList.add('active');
         }
       });
