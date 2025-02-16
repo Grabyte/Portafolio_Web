@@ -17,23 +17,22 @@ return (
                     <div className="nav__img">
                         <img src={ricardoimg} alt="imagen del desarrollador Ricardo Gabriel Torrena" />
                     </div>
-                        <a href="#" className="nav__name">Ricardo Torrena</a>
+                    <a href="#" className="logo">Gra<span className='nav__name'>byte</span></a>
                 </div>
 
                 <div className="nav__menu">
                     <ul className="nav__list">
-                        <li className="nav__item"><a href="#" className="nav__link active" id='Home'>Home</a></li>
-                        <li className="nav__item"><a href="#" className="nav__link" id='About'>About</a></li>
-                        <li className="nav__item"><a href="#" className="nav__link" id='Skills'>Skills</a></li>
-                        <li className="nav__item"><a href="#" className="nav__link" id='Portfolio'>Portfolio</a></li>
-                        <li className="nav__item"><a href="#" className="nav__link" id='Contact'>Contact</a></li>
+                        <li className="nav__item"><a href="#" className="nav__link active" id='Home'>Sobre mi</a></li>
+                        <li className="nav__item"><a href="#" className="nav__link" id='About'>Habilidades</a></li>
+                        <li className="nav__item"><a href="#" className="nav__link" id='Portfolio'>Proyectos</a></li>
+                        <li className="nav__item"><a href="#" className="nav__link" id='Contact'>Contacto</a></li>
                     </ul>
                 </div>
 
                 <div className="nav__social">
-                    <a href="#" className="nav__social-icon"><FontAwesomeIcon icon={faLinkedin} /></a>
-                    <a href="#" className="nav__social-icon"><FontAwesomeIcon icon={faGithub} /></a>
-                    <a href="#" className="nav__social-icon"><FontAwesomeIcon icon={faInstagram} /></a>
+                    <a href="https://www.linkedin.com/in/ricardo-torrena-07448b205" target='_blank' className="nav__social-icon"><FontAwesomeIcon icon={faLinkedin} /></a>
+                    <a href="https://github.com/Grabyte?tab=repositories" target='_blank' className="nav__social-icon"><FontAwesomeIcon icon={faGithub} /></a>
+                    <a href="https://www.instagram.com/gabrinchou/" target="_blank" className="nav__social-icon"><FontAwesomeIcon icon={faInstagram} /></a>
                 </div>
             </div>
         </nav>
