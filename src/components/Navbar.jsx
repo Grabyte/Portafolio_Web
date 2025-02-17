@@ -1,12 +1,10 @@
 import '../navbar.css'
-import NavbarLogic from './NavbarLogic'
+import { Link } from "react-scroll";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedin, faGithub, faInstagram } from '@fortawesome/free-brands-svg-icons';
 import ricardoimg from '../assets/images/ricardo2.jpg'
 
 function Navbar() {
-NavbarLogic();
-
 return (
     <> 
     <header className="header">
@@ -22,10 +20,9 @@ return (
 
                 <div className="nav__menu">
                     <ul className="nav__list">
-                        <li className="nav__item"><a href="#" className="nav__link active" id='Home'>Sobre mi</a></li>
-                        <li className="nav__item"><a href="#" className="nav__link" id='About'>Habilidades</a></li>
-                        <li className="nav__item"><a href="#" className="nav__link" id='Portfolio'>Proyectos</a></li>
-                        <li className="nav__item"><a href="#" className="nav__link" id='Contact'>Contacto</a></li>
+                    <Link to="home" smooth={true} duration={500} className="nav__link">Inicio</Link>
+                    <Link to="portfolio" smooth={true} duration={500} className="nav__link">Proyectos</Link>
+                    <Link to="contact" smooth={true} duration={500} className="nav__link">Contacto</Link>
                     </ul>
                 </div>
 

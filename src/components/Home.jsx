@@ -6,9 +6,9 @@ function Home() {
     <>
     <section className="home">
       <div className="home__content">
-        <h1>Hola soy <br /><span>Ricardo Torrena</span></h1>
-        <h3>Desarrollador <span>Web</span></h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam in asperiores similique, saepe dolor repellat tempore aliquam, sapiente consequatur sunt eum eligendi nisi nesciunt inventore temporibus magni laudantium, quas dolore. Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid porro beatae maxime debitis. Laudantium ipsum hic libero, dolorem asperiores eaque quae recusandae ducimus fuga architecto aperiam maxime molestias. Veniam, minima.</p>
+        <h1>Hola, soy <span>Ricardo Torrena</span></h1>
+        <h2>Software <span>developer</span></h2>
+        <p>Soy un desarrollador web en formación con una sólida base en programación Full Stack. Me destaco por ser organizado, proactivo y responsable, con una gran predisposición para el trabajo en equipo y la resolución de problemas.</p>
         <div className="btn__group">
           <a href="" className="btn">Curriculum</a> 
           <a href="#contact" className="btn">Contactar</a>

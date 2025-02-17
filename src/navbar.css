@@ -4,7 +4,6 @@
 /*===== VARIABLES CSS =====*/
 * {
   box-sizing: border-box;
-  scroll-behavior: smooth;
 }
 
 body {
@@ -40,7 +39,7 @@ img {
   position: fixed;
   width: 100%;
   height: var(--header-height);
-  padding: 0 1.5rem;
+  padding: 1 1.5rem;
   background: rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(10px);
   z-index: var(--z-fixed);
@@ -86,7 +85,7 @@ img {
 }
 
 .nav__perfil {
-  flex: 0 0 30%; /* Esto asegura que .nav__perfil ocupe el 50% del ancho */
+  flex: 0 0 30%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -124,6 +123,7 @@ img {
 
 .nav__list {
   display: flex;
+  padding-left: 1rem;
 }
 
 .nav__item {
@@ -131,10 +131,11 @@ img {
 }
 
 .nav__link {
-  padding: .5rem .8rem;
+  padding: .5rem .9rem;
   border-radius: .25rem;
   color: var(--white-color);
   transition: ease-in-out 0.3s;
+  cursor: pointer;
 }
 
 .nav__link:hover {
