@@ -1,0 +1,54 @@
+/* Estilos del footer */
+.footer {
+  background-color: rgba(25, 42, 86, 0.25);
+  color: white;
+  text-align: center;
+  padding-top: 0.3rem;
+  padding-bottom: 0.1rem;
+  margin-top: var(--header-height);
+}
+
+.footer__links {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.footer__link {
+  color: white;
+  font-size: 1.2rem;
+  text-decoration: none;
+  position: relative;
+  font-weight: normal;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+/* Animación de la línea debajo del enlace */
+.footer__link::after {
+  content: '';
+  position: absolute;
+  bottom: -5px; /* Ajusta la posición de la línea debajo */
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #00A8FF;
+  transition: width 0.3s ease-in-out;
+}
+
+.footer__link:hover {
+  color: #00A8FF; /* Cambio de color al pasar el ratón */
+}
+
+.footer__link:hover::after {
+  width: 100%;
+}
+
+/* Estilo del texto de copyright */
+.footer__text {
+  font-size: 1rem;
+  color: #b0b0b0;
+}
+
+
+

@@ -44,7 +44,7 @@ function ProyectsSection() {
           <div className='proyect__card'>
             <img src={MuebleriaImg} alt="proyecto4" />
             <h3>Muebleria Itatí</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos culpa veniam nam ullam. Soluta dolore asperiores, quos in ratione fuga. Consequatur assumenda fugiat quas deleniti labore, facere voluptatum officiis. Labore!</p>
+            <p>Una tienda en línea de muebles desarrollada con Bootstrap. El proyecto hace uso de componentes de Bootstrap como tarjetas, modales y carruseles para ofrecer una experiencia de usuario intuitiva y atractiva. La página es completamente responsiva, adaptándose perfectamente a diferentes tamaños de pantalla.</p>
             <a className='proyect__btn' target='_blank' href="https://github.com/Grabyte/UTN_Professional_Front_End_Developer/tree/main/Proyecto_Muebleria">Visitar codigo</a>
           </div>
         </div>

@@ -28,7 +28,6 @@
 }
 
 /*===== NAV =====*/
-
 .header {
   height: calc(var(--header-height) + 1rem);
 }
@@ -49,6 +48,11 @@
 
 .logo:hover {
   transform: scale(1.1);
+}
+
+.nav__toggle {
+  font-size: 3rem;
+  display: none;
 }
 
 .nav {
@@ -134,5 +138,47 @@
 }
 
 /*===== MEDIA QUERIES =====*/
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 768px) {
+  .nav__menu {
+    display: none; /* Por defecto, el menú está oculto */
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 50%; /* Para que el menú ocupe todo el ancho */
+    padding: 1rem 3rem;
+    background: rgba(0, 0, 0, 0.3);
+    border-bottom-left-radius: 2rem;
+    border-left: 2px solid #000000;
+    border-bottom: 2px solid #000000;
+    margin-right: 0;
+  }
+
+  .nav__menu.show {
+    display: block; /* El menú se muestra cuando tiene la clase 'show' */
+  }
+
+  .nav__list {
+    display: block;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  .nav__link {
+    display: block;
+    padding: 0.5rem;
+    width: 100%;
+  }
+
+  .nav__toggle {
+    padding: 0.5rem;
+    cursor: pointer;
+    font-size: 3rem;
+    display: block;
+    transition: ease-in-out 0.3s;
+    user-select: none;
+  }
+
+  .nav__social {
+    display: none;
+  }
 }

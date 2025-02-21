@@ -70,10 +70,20 @@
 
 .proyect__card h3 {
   font-size: 1.9rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .proyect__card p {
   font-size: 1.2rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .proyect__btn  {
@@ -93,4 +103,10 @@
   background-color: #00A8FF;
   color: #192a56;
   box-shadow: 0 0 25px rgba(0, 168, 255, 1);
+}
+
+@media screen and (max-width: 996px) { 
+  .proyects__box {
+  grid-template-columns: repeat(1, minmax(350px, 1fr));
+  }
 }
