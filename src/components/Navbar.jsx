@@ -21,7 +21,7 @@ return (
                 <div className="nav__menu">
                     <ul className="nav__list">
                     <Link to="home" smooth={true} duration={500} className="nav__link">Inicio</Link>
-                    <Link to="portfolio" smooth={true} duration={500} className="nav__link">Proyectos</Link>
+                    <Link to="proyects" smooth={true} duration={500} className="nav__link">Proyectos</Link>
                     <Link to="contact" smooth={true} duration={500} className="nav__link">Contacto</Link>
                     </ul>
                 </div>
