@@ -1,5 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
 :root {
-  @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   background-image: linear-gradient(to bottom, #0b0032, #1a0022, #1a0015, #130008, #000000);
   color: rgba(255, 255, 255, 0.87);
@@ -27,9 +27,6 @@
   /*===== z index =====*/
   --z-fixed: 100;
 
-  /*===== GOOGLE FONTS =====*/
-  
-
 /*===== VARIABLES CSS =====*/
 * {
   box-sizing: border-box;
@@ -52,5 +49,10 @@ a {
 img {
   max-width: 100%;
   height: auto;
+}
+
+.principal__container {
+  min-width: 320px;
+  width: 100%;
 }
 }

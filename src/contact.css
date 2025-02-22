@@ -3,7 +3,7 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  width: 50%;
+  width: 60%;
   margin: 0 auto;
   padding-top: var(--header-height);
 }
@@ -14,8 +14,8 @@
 
 .contact form {
   display: flex;
-  flex-direction: column;  /* Todo en una columna */
-  gap: 2rem;  /* Espaciado entre los elementos */
+  flex-direction: column;
+  gap: 2rem;
   width: 100%;
 }
 
@@ -44,6 +44,7 @@
 }
 
 .contact__btn {
+  align-self: center;
   background-color: #192a56;
   color: #FFF;
   padding: 1rem 2rem;
@@ -61,9 +62,14 @@
   margin: 2rem auto;
 }
 
-
 .contact__btn:hover {
   background-color: #00A8FF;
   color: #192a56;
   box-shadow: 0 0 25px rgba(0, 168, 255, 1);
+}
+
+@media screen and (max-width: 768px) {
+  .contact {
+    width: 90%;
+  }
 }

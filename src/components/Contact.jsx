@@ -4,24 +4,24 @@ import '../contact.css'
 
 function Contact() {
   const form = useRef(null);
-  const [buttonText, setButtonText] = useState("Send Email");
+  const [buttonText, setButtonText] = useState("Enviar");
 
   const sendEmail = (event) => {
     event.preventDefault();
     setButtonText("Sending...");
 
-    const serviceID = "default_service"; // Reemplázalo con tu Service ID
-    const templateID = "template_hvdk88l"; // Reemplázalo con tu Template ID
-    const publicKey = "GvjHafj-y65Ozgzv7"; // Reemplázalo con tu Public Key
+    const serviceID = import.meta.env.VITE_SERVICE_ID;
+    const templateID = import.meta.env.VITE_TEMPLATE_ID;
+    const publicKey = import.meta.env.VITE_PUBLIC_KEY;    
 
     emailjs.sendForm(serviceID, templateID, form.current, publicKey)
       .then(() => {
-        setButtonText("Send Email");
+        setButtonText("Enviar");
         alert("¡Correo enviado con éxito!");
         form.current.reset(); // Limpia el formulario después de enviar
       })
       .catch((err) => {
-        setButtonText("Send Email");
+        setButtonText("Enviar");
         alert("Error al enviar el correo: " + err.text);
       });
   };

@@ -1,24 +1,28 @@
-.proyects {
+.projects {
   padding-top: var(--header-height);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.proyects__heading {
+.projects__heading {
   text-align: center;
-  font-size: 6rem;
+  font-size: 4rem;
   margin: 3rem auto;
+  width: 100%;
 }
 
-.proyects__menu {
+.projects__menu {
   display: flex;
   align-items: center;
 }
 
-.proyects__list {
+.projects__list {
   display: flex;
   gap: 1rem;
 }
 
-.proyects__link {
+.projects__link {
   padding: .5rem .9rem;
   border-radius: .25rem;
   color: white;
@@ -26,21 +30,21 @@
   cursor: pointer;
 }
 
-.proyects__link:hover {
+.projects__link:hover {
   background-color: var(--first-color);
 }
 
-.proyects__box {
-  width: 70%;
+.projects__box {
+  width: 80%;
   display: grid;
-  grid-template-columns: repeat(2, minmax(350px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   place-items: center;
   margin: 10% auto;
   gap: 4rem;
   row-gap: 5rem;
 }
 
-.proyect__card {
+.project__card {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -56,37 +60,39 @@
   transition: ease-in-out 0.3s;
 }
 
-.proyect__card:hover {
+.project__card:hover {
   box-shadow: 0 0 25px rgba(0, 168, 255, 1),
   0 0 50px rgba(0, 168, 255, 1);
   transform: scale(1.03);
 }
 
-.proyect__card img {
+.project__card img {
   width: 100%;
   border-radius: 1rem;
   object-fit: cover;
 }
 
-.proyect__card h3 {
+.project__card h3 {
   font-size: 1.9rem;
   display: -webkit-box;
   -webkit-line-clamp: 1;
+  line-clamp: 1;
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-.proyect__card p {
+.project__card p {
   font-size: 1.2rem;
   display: -webkit-box;
   -webkit-line-clamp: 4;
+  line-clamp: 4;
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-.proyect__btn  {
+.project__btn  {
   background-color: #192a56;
   color: #FFF;
   padding: 1rem 2rem;
@@ -99,14 +105,34 @@
   transition: ease-in-out 0.3s;
 }
 
-.proyect__btn:hover {
+.project__btn:hover {
   background-color: #00A8FF;
   color: #192a56;
   box-shadow: 0 0 25px rgba(0, 168, 255, 1);
 }
 
 @media screen and (max-width: 996px) { 
-  .proyects__box {
-  grid-template-columns: repeat(1, minmax(350px, 1fr));
+  .projects__box {
+  grid-template-columns: repeat(1, 1fr);
+  }
+
+  .project__card h3 {
+    font-size: 1.9rem;
+    display: -webkit-box;
+    -webkit-line-clamp: none;
+    line-clamp: none;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .project__card p {
+    font-size: 1.2rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 7;
+    line-clamp: 7;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 }
