@@ -1,4 +1,4 @@
-import '../projects.css'
+import '../styles/projects.css'
 import EcommerseImg from '../assets/images/ecommerse2.png'
 import MuebleriaImg from '../assets/images/muebleria2-min.png'
 import TikTakToeImg from '../assets/images/TikTakToe2.png'
@@ -25,7 +25,7 @@ function ProjectsSection() {
         <div className='projects__box'>
           <div className='project__card'>
             <img src={EcommerseImg} alt="proyecto1" />
-            <h3>Ecommerse de ropa</h3>
+            <h3>Ecommerce de ropa</h3>
             <p>Mi proyecto de E-commerce es una tienda en línea que permite a los usuarios registrarse e iniciar sesión, para poder acceder a comprar productos de ropa. Los productos se obtienen desde una API y se muestran dinámicamente en la tienda.</p>
             <a className='project__btn' target='_blank' href="https://github.com/Grabyte/UTN_Full_Stack_Developer/tree/main/M2_TrabajoPractico/Ecommerse">Visitar codigo</a>
           </div>

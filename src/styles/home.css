@@ -63,6 +63,7 @@
 .btn__group {
   display: flex;
   align-items: center;
+  align-content: center;
   gap: 1.5rem;
 }
 

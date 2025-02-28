@@ -68,6 +68,13 @@
   box-shadow: 0 0 25px rgba(0, 168, 255, 1);
 }
 
+.success__message {
+  color: green;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+
 @media screen and (max-width: 768px) {
   .contact {
     width: 90%;

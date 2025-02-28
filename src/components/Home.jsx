@@ -1,7 +1,7 @@
-import '../home.css'
+import '../styles/home.css'
 import ricardoimg from '../assets/images/ricardo2.jpg'
-import cv from '../assets/CV.pdf'
 import { Link } from 'react-scroll'
+import PDFViewer from "../components/PdfViewer";
 
 function Home() {
   return (
@@ -12,7 +12,7 @@ function Home() {
         <h2>Software <span>developer</span></h2>
         <p>Soy un desarrollador web en formación con una sólida base en programación Full Stack. Me destaco por ser organizado, proactivo y responsable, con una gran predisposición para el trabajo en equipo y la resolución de problemas.</p>
         <div className="btn__group">
-        <a href={cv} download="Ricardo_Torrena_Curriculum.pdf" className="btn">Curriculum</a> 
+          <PDFViewer/>
           <Link to="contact" smooth={true} duration={500} className="btn">Contacto</Link>
         </div>
       </div>

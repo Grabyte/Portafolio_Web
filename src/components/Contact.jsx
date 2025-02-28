@@ -1,33 +1,39 @@
 import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
-import '../contact.css'
+import '../styles/contact.css';
 
 function Contact() {
   const form = useRef(null);
   const [buttonText, setButtonText] = useState("Enviar");
+  const [successMessage, setSuccessMessage] = useState("");
 
   const sendEmail = (event) => {
     event.preventDefault();
-    setButtonText("Sending...");
+    setButtonText("Enviando...");
+    setSuccessMessage("");
 
     const serviceID = import.meta.env.VITE_SERVICE_ID;
     const templateID = import.meta.env.VITE_TEMPLATE_ID;
-    const publicKey = import.meta.env.VITE_PUBLIC_KEY;    
+    const publicKey = import.meta.env.VITE_PUBLIC_KEY;
 
     emailjs.sendForm(serviceID, templateID, form.current, publicKey)
       .then(() => {
         setButtonText("Enviar");
-        alert("¡Correo enviado con éxito!");
-        form.current.reset(); // Limpia el formulario después de enviar
+        setSuccessMessage("¡Correo enviado con éxito!");
+        form.current.reset(); // Limpiar el formulario después de enviar
+        
+        // Después de 5 segundos, eliminar el mensaje de éxito
+        setTimeout(() => {
+          setSuccessMessage("");
+        }, 5000);
       })
       .catch((err) => {
         setButtonText("Enviar");
-        alert("Error al enviar el correo: " + err.text);
+        setSuccessMessage(`Error al enviar el correo: ${err.text}`);
       });
   };
 
   return (
-
     <section className="contact">
       <h2>Contacto</h2>
       <form ref={form} onSubmit={sendEmail}>
@@ -40,11 +46,16 @@ function Contact() {
           <textarea name="message" id="message" cols={30} rows={10} required></textarea>
           <input className="contact__btn" type="submit" value={buttonText} />
         </div>
-        </form>
-
-
+        {successMessage && (
+          <div className="success__message">
+            {successMessage}
+          </div>
+        )}
+      </form>
     </section>
   );
 }
 
 export default Contact;
+
+

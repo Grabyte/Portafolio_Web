@@ -1,5 +1,5 @@
 import { useState } from "react";
-import '../navbar.css';
+import '../styles/navbar.css';
 import { Link } from "react-scroll";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedin, faGithub, faInstagram } from '@fortawesome/free-brands-svg-icons';

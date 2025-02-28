@@ -58,6 +58,7 @@
   cursor: pointer;
   box-shadow: 0 0 10px rgba(0, 168, 255, 0.5);
   transition: ease-in-out 0.3s;
+  position: relative;
 }
 
 .project__card:hover {
@@ -67,10 +68,19 @@
 }
 
 .project__card img {
-  width: 100%;
+  width: 90%;  /* La imagen ocupa solo el 90% del ancho */
+  max-width: 90%;
+  max-height: 90%;
   border-radius: 1rem;
   object-fit: cover;
+  transition: transform 0.3s ease-in-out;
 }
+
+.project__card:hover img {
+  transform: scale(1.08); /* Crece, pero no llega al 100% */
+}
+
+
 
 .project__card h3 {
   font-size: 1.9rem;

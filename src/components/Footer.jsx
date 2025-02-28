@@ -1,5 +1,5 @@
 import { Link } from "react-scroll"
-import '../footer.css'
+import '../styles/footer.css'
 
 function Footer() {
   return (
