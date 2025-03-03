@@ -3,7 +3,7 @@ import { Document, Page } from "react-pdf";
 import { pdfjs } from "react-pdf";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
-import cv from "../../public/CV.pdf";
+import cv from "../assets/CV.pdf";
 import "react-pdf/dist/esm/Page/AnnotationLayer.css";
 import "react-pdf/dist/esm/Page/TextLayer.css";
 import "../styles/pdfViewer.css";

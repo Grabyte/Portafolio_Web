@@ -2,6 +2,7 @@ import '../styles/home.css'
 import ricardoimg from '../assets/images/ricardo2.jpg'
 import { Link } from 'react-scroll'
 import PDFViewer from "../components/PdfViewer";
+import Carousel from './InfinityScroll';
 
 function Home() {
   return (
@@ -20,6 +21,7 @@ function Home() {
           <img src={ricardoimg} alt="" />
       </div>
     </section>
+    <Carousel/>
     </>
   )
 }

@@ -8,7 +8,8 @@
 .projects__heading {
   text-align: center;
   font-size: 4rem;
-  margin: 3rem auto;
+  padding-top: 1rem;
+  margin: 0 auto;
   width: 100%;
 }
 

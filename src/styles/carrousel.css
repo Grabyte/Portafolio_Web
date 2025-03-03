@@ -1,0 +1,106 @@
+:root {
+  --carousel-height: 10vh;    /* Altura del slider basada en el 10% de la altura de la pantalla */
+  --carousel-width: 15vw;     /* Ancho del slider basado en el 10% del ancho de la pantalla */
+  --carousel-quantity: 10;    /* Cantidad de elementos visibles */
+  --carousel-duration: 30s;   /* Duración de la animación */
+}
+
+.slider__header {
+  text-align: center;
+  font-size: 1.5rem;
+  margin: 0 auto;
+  padding-top: 1rem;
+}
+
+.slider {
+  display: flex;
+  width: 100%;
+  height: var(--carousel-height);
+  overflow: hidden;
+  mask-image: linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%);
+  margin: 1rem auto;
+}
+
+.slider .list {
+  display: flex;
+  width: 100%;
+  min-width: calc(var(--carousel-width) * var(--carousel-quantity));
+  position: relative;
+}
+
+/* Contenedor rectangular para icono y texto */
+.slider .list .item {
+  position: absolute;
+  left: calc(100% + (var(--carousel-width) * var(--position)));
+  animation: autoRun var(--carousel-duration) linear infinite;
+  animation-delay: calc((var(--carousel-duration) / var(--carousel-quantity)) * (var(--position) - 1) - (var(--carousel-duration) / 1)) !important;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 0 10px;
+}
+
+/* Estilos para todos los iconos (FontAwesome y SVG personalizados) */
+.slider .list .item svg,
+.slider .list .item .svg-inline--fa {
+  width: 60px; /* Tamaño del icono */
+  height: 60px;
+  flex-shrink: 0; /* Evita que el icono se reduzca */
+  cursor: pointer;
+  pointer-events: stroke;
+}
+
+.slider .list .item span {
+  font-size: 1rem;
+  color: white; /* Color del texto */
+  white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+  pointer-events: none;
+}
+
+/*
+.slider .list:hover .item {
+  animation-play-state: paused !important;
+}
+*/
+
+.slider.reverse .item {
+  animation: reversePlay var(--carousel-duration) linear infinite;
+}
+
+/* Animación autoRun */
+@keyframes autoRun {
+  from {
+    left: 100%;
+  }
+  to {
+    left: calc(-1 * var(--carousel-width));
+  }
+}
+
+/* Animación reversePlay */
+@keyframes reversePlay {
+  from {
+    left: calc(-1 * var(--carousel-width));
+  }
+  to {
+    left: 100%;
+  }
+}
+
+@media screen and (max-width: 996px) {
+  :root {
+    --carousel-width: 20vw;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  :root {
+    --carousel-width: 25vw;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  :root {
+    --carousel-width: 50vw;
+  }
+}
