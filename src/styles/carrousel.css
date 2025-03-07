@@ -1,7 +1,7 @@
 :root {
   --carousel-height: 10vh;    /* Altura del slider basada en el 10% de la altura de la pantalla */
-  --carousel-width: 15vw;     /* Ancho del slider basado en el 10% del ancho de la pantalla */
-  --carousel-quantity: 10;    /* Cantidad de elementos visibles */
+  --carousel-width: 15vw;     /* Ancho del slider , este determina a su vez la cantidad de elementos que se pueden representar en pantalla 15VW = 6 elementos */
+  --carousel-quantity: 10;    /* Cantidad de elementos que hay en el carrusel, debe ser igual a la cantidad de elementos que tenemos en el slider  */
   --carousel-duration: 30s;   /* Duración de la animación */
 }
 
@@ -102,5 +102,11 @@
 @media screen and (max-width: 550px) {
   :root {
     --carousel-width: 50vw;
+  }
+}
+
+@media screen and (max-width: 330px) {
+  :root {
+    --carousel-width: 80vw;
   }
 }

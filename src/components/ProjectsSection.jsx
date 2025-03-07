@@ -2,7 +2,7 @@ import '../styles/projects.css'
 import EcommerseImg from '../assets/images/ecommerse2.png'
 import MuebleriaImg from '../assets/images/muebleria2-min.png'
 import TikTakToeImg from '../assets/images/TikTakToe2.png'
-import DivulgacionImg from '../assets/images/infoWeb-min.png'
+import DivulgacionImg from '../assets/images/InfoWeb-min.jpg'
 
 function ProjectsSection() {
   return (

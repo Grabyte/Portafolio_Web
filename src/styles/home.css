@@ -40,10 +40,12 @@
 }
 
 .home__content p {
-  font-size: 1.5rem;
+  min-height: 36vh;
+  font-size: 1.6rem;
   font-weight: 500;
   line-height: 1.8;
   opacity: 0.9;
+  will-change: contents;
 }
 
 .home__img img {
@@ -63,9 +65,16 @@
 
 .btn__group {
   display: flex;
-  align-items: center;
-  align-content: center;
-  gap: 1.5rem;
+  gap: 1rem;
+  justify-content: center;
+  width: 100%;
+}
+
+.btn__group .btn {
+  flex: 1;
+  text-align: center;
+  padding: 1rem 2rem;
+  min-width: max-content; /* Se asegura de que el botón más corto crezca hasta el tamaño del más largo */
 }
 
 .btn {
@@ -86,6 +95,16 @@
   background-color: #00A8FF;  
   color: #192a56;
   box-shadow: 0 0 25px rgba(0, 168, 255, 1);
+}
+
+@media screen and (max-width: 1280px) {
+
+  .home {
+    min-height: 100vh;
+  }
+  .home__content p {
+    font-size: 1.25rem;
+  }
 }
 
 @media screen and (max-width: 996px) {
@@ -109,21 +128,42 @@
     align-items: center;
     width: 95%;
   }
-  .btn__group {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 2rem;
-    width: 100%;
+
+  .home__content p {
+    min-height: 25vh;
   }
 
-  .btn {
+  .btn__group {
     width: 70%;
-    text-align: center;
-    padding: 1rem;
   }
 
   .home__img img {
     display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .home__content p {
+    min-height: 30vh;
+    font-size: 1.2rem;
+  }
+
+  .btn__group {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+
+  .home {
+    min-height: 100vh;
+  }
+  .home__content p {
+    font-size: 1.1rem;
+    min-height: 20rem;
+  }
+  .btn__group {
+    display: flex;
+    flex-direction: column;
   }
 }

@@ -147,6 +147,12 @@
 }
 
 /*===== MEDIA QUERIES =====*/
+@media screen and (max-width: 996px) {
+  .nav__img img {
+    display: flex;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .nav__menu {
     display: none;
@@ -196,8 +202,8 @@
   }
 }
 
-@media screen and (max-width: 996px) {
+@media screen and (max-width: 370px) {
   .nav__img img {
-    display: flex;
+    display: none;
   }
 }
