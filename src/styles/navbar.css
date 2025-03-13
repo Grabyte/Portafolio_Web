@@ -146,6 +146,22 @@
   color: var(--first-color);
 }
 
+
+.nav__language {
+  display: flex;
+  align-items: center;
+  color: #ffffffd3;
+  padding: 0.5rem;
+  border-left: 1px solid #ccc;
+  font-weight: bold;
+  cursor: pointer;
+  transition: ease-in-out 0.3s;
+}
+
+.nav__language:hover {
+  color: #0073e6; /* Cambia el color al pasar el mouse */
+}
+
 /*===== MEDIA QUERIES =====*/
 @media screen and (max-width: 996px) {
   .nav__img img {
@@ -153,7 +169,7 @@
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 800px) {
   .nav__menu {
     display: none;
     position: absolute;
@@ -202,8 +218,14 @@
   }
 }
 
-@media screen and (max-width: 370px) {
+@media screen and (max-width: 400px) {
   .nav__img img {
     display: none;
+  }
+
+  .nav__language {
+    order: -1;
+    border-left: 0px;
+    border-right: 1px solid #ccc;
   }
 }

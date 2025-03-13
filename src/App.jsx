@@ -1,19 +1,21 @@
-import Navbar from "./components/Navbar"
-import Home from "./components/Home"
-import ProjectsSection from "./components/ProjectsSection"
-import Contact from "./components/Contact"
-import Footer from "./components/Footer"
+
+import { LanguageProvider } from './components/languagueProviderComponent/languagueProvider'; // Importa el LanguageProvider
+import Navbar from "./components/navbarComponent/Navbar";
+import Home from "./components/homeComponent/Home";
+import ProjectsSection from "./components/projectsSectionComponent/ProjectsSection";
+import Contact from "./components/contactComponent/Contact";
+import Footer from "./components/footerComponent/Footer";
 
 function App() {
   return (
-    <>
-    <Navbar />
-    <Home id="home" />
-    <ProjectsSection id="projects" />
-    <Contact id="contact"/>
-    <Footer id="footer"/>
-    </>
-  )
+    <LanguageProvider> {/* Envuelve todo con LanguageProvider */}
+      <Navbar />
+      <Home id="home" />
+      <ProjectsSection id="projects" />
+      <Contact id="contact" />
+      <Footer id="footer" />
+    </LanguageProvider>
+  );
 }
 
-export default App
+export default App;

@@ -1,15 +1,22 @@
-import { useState, useEffect, useRef } from "react";
+import { useContext,useState, useEffect, useRef } from "react";
+import { LanguageContext } from '../languagueProviderComponent/languagueContext';
+import { PDFViewerText } from './PdfViewerText'; // ajustá la ruta si está en otro archivo
 import { Document, Page } from "react-pdf";
 import { pdfjs } from "react-pdf";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
-import cv from "../assets/CV.pdf";
+import cvEs from "../../assets/CV.pdf";
+import cvEn from "../../assets/CV_English.pdf";
 import "react-pdf/dist/esm/Page/AnnotationLayer.css";
 import "react-pdf/dist/esm/Page/TextLayer.css";
-import "../styles/pdfViewer.css";
+import "../../styles/pdfViewer.css";
 pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
 
 const PDFViewerModal = () => {
+  const { language } = useContext(LanguageContext);
+  const text = PDFViewerText[language];
+  const cvFile = language === "es" ? cvEs : cvEn;
+
   const [isOpen, setIsOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
   const modalRef = useRef(null);
@@ -61,13 +68,13 @@ const PDFViewerModal = () => {
 
   return (
     <>
-      <a className="btn" onClick={() => setIsOpen(true)}>CURRICULUM</a>
+      <a className="btn" onClick={() => setIsOpen(true)}>{text.button}</a>
       {isOpen && (
         <div className="modal__overlay" onClick={closeModal}>
           <div className="modal__content" ref={modalRef} onClick={(e) => e.stopPropagation()}>
             <div className="pdf__container">
               <Document 
-                file={cv} 
+                file={cvFile} 
                 onLoadSuccess={onLoadSuccess} 
                 className="pdf__document"
                 loading={null} // Oculta el mensaje de carga
@@ -79,8 +86,8 @@ const PDFViewerModal = () => {
               </Document>
             </div>
             <div className={`download__container ${isPdfLoaded ? "active" : ""}`}>
-              <a href={cv} download="Ricardo_Torrena_Curriculum.pdf" className="btn">
-                Descargar Curriculum
+              <a href={cvFile} download="Ricardo_Torrena_Curriculum.pdf" className="btn">
+              {text.download}
               </a>
             </div>
           </div>

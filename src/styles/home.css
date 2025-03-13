@@ -41,7 +41,7 @@
 
 .home__content p {
   min-height: 36vh;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   font-weight: 500;
   line-height: 1.8;
   opacity: 0.9;
@@ -103,7 +103,7 @@
     min-height: 100vh;
   }
   .home__content p {
-    font-size: 1.25rem;
+    font-size: 1.3rem;
   }
 }
 

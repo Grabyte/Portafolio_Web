@@ -39,7 +39,7 @@
   width: 80%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  place-items: center;
+  align-items: stretch; /* Clave para igualar altura */
   margin: 10% auto;
   gap: 4rem;
   row-gap: 5rem;
@@ -85,12 +85,7 @@
 
 .project__card h3 {
   font-size: 1.9rem;
-  display: -webkit-box;
-  -webkit-line-clamp: 1;
-  line-clamp: 1;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  text-align: center;
 }
 
 .project__card p {

@@ -103,6 +103,10 @@ body.modal__open .header {
   transition: opacity 0.2s ease-in-out; /* Transición suave */
 }
 
+.download__container .btn {
+  max-width: 95%;
+}
+
 .download__container.active {
   opacity: 1;
 }

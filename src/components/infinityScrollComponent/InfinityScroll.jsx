@@ -1,11 +1,18 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faReact, faJsSquare, faHtml5, faCss3Alt, faNodeJs, faSass, faBootstrap, faGithub } from '@fortawesome/free-brands-svg-icons';
-import "../styles/carrousel.css";
+import { useContext } from 'react'; // Importa useContext
+import { LanguageContext } from '../languagueProviderComponent/languagueContext'; 
+import infinityScrollText from './InfinityScrollText';
+import "../../styles/carrousel.css";
 
-const Carousel = () => {
+function Carousel () {
+
+  const { language } = useContext(LanguageContext);
+  const text = infinityScrollText[language];
+
   return (
     <>
-      <h2 className="slider__header">Habilidades</h2>
+      <h2 className="slider__header">{text.skills}</h2>
       <div className="slider reverse">
         <div className="list">
           <div className="item" style={{ "--position": 1 }}>
