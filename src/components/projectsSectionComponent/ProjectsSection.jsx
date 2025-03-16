@@ -22,9 +22,14 @@ function ProjectsSection() {
               <img src={images[index]} alt={`proyecto${index + 1}`} />
               <h3>{project.title}</h3>
               <p>{project.description}</p>
-              <a className='project__btn' target='_blank' rel='noopener noreferrer' href={project.link}>
-                {project.button}
-              </a>
+              <div className='project__btns-group'>
+                <a className='project__btn' target='_blank' rel='noopener noreferrer' href={project.linkSite}>
+                  {project.buttonSite}
+                </a>
+                <a className='project__btn' target='_blank' rel='noopener noreferrer' href={project.linkCode}>
+                  {project.buttonCode}
+                </a>
+              </div>
             </div>
           ))}
         </div>
