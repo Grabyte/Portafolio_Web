@@ -152,12 +152,12 @@
   align-items: center;
   color: #ffffffd3;
   padding: 0.5rem;
+  gap: 4px;
   border-left: 1px solid #ccc;
   font-weight: bold;
   cursor: pointer;
   transition: ease-in-out 0.3s;
 }
-
 .nav__language:hover {
   color: #0073e6; /* Cambia el color al pasar el mouse */
 }
@@ -169,7 +169,7 @@
   }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 860px) {
   .nav__menu {
     display: none;
     position: absolute;
@@ -218,12 +218,14 @@
   }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 440px) {
   .nav__img img {
     display: none;
   }
 
   .nav__language {
+    flex-direction: column;
+    justify-content: center;
     order: -1;
     border-left: 0px;
     border-right: 1px solid #ccc;

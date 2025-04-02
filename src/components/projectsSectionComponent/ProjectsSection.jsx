@@ -1,6 +1,6 @@
 import { useContext } from 'react'; // Importa useContext
 import '../../styles/projects.css';
-import EcommerseImg from '../../assets/images/ecommerse2.png';
+import EcommerseImg from '../../assets/images/ecommerse2.jpg';
 import MuebleriaImg from '../../assets/images/muebleria2-min.png';
 import TikTakToeImg from '../../assets/images/TikTakToe2.png';
 import DivulgacionImg from '../../assets/images/InfoWeb-min.jpg';
